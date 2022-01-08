@@ -1,11 +1,8 @@
 #include <iostream>
 #include <vector>
-#include <unordered_map>
 #include <string>
-#include <string_view>
 #include <algorithm>
 #include <stack>
-#include <memory>
 #include <cmath>
 #include <cctype>
 #include <regex>
@@ -150,7 +147,8 @@ public:
 };
 
 int main() {
-    std::cout << "<Введите значение> ";
+    setlocale(LC_ALL,"Russian");
+    std::cout << "<Enter the expression> ";
     std::string input;
     std::getline(std::cin, input);
     Calculator::getInstance(input);
